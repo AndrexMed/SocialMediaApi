@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using SocialMedia.Core.Interfaces;
+using SocialMedia.Infrastructure.Data;
 using SocialMedia.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddTransient<IPostRepository, PostRepository>();
+
+builder.Services.AddDbContext<SocialMediaContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("stringCnx"))
+.EnableSensitiveDataLogging());
 
 var app = builder.Build();
 

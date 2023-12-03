@@ -9,3 +9,4 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Core\obj\Debug\net8.0\Soc
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Core\obj\Debug\net8.0\refint\SocialMedia.Core.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Core\obj\Debug\net8.0\SocialMedia.Core.pdb
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Core\obj\Debug\net8.0\ref\SocialMedia.Core.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Core\obj\Debug\net8.0\SocialMedia.Core.sourcelink.json

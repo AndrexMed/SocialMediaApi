@@ -13,3 +13,6 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\net8.0\refint\SocialMedia.Infrastructure.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\net8.0\SocialMedia.Infrastructure.pdb
 C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\net8.0\ref\SocialMedia.Infrastructure.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\bin\Debug\net8.0\SocialMedia.Infrastructure.runtimeconfig.json
+C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\net8.0\SocialMedia.Infrastructure.sourcelink.json
+C:\Users\giova\source\repos\SocialMediaApi\SocialMedia.Infrastructure\obj\Debug\net8.0\SocialMedia.Infrastructure.genruntimeconfig.cache
