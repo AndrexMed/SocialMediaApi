@@ -1,4 +1,6 @@
-﻿namespace SocialMedia.Core.Entities;
+﻿using System.Text.Json.Serialization;
+
+namespace SocialMedia.Core.Entities;
 
 public partial class Post
 {
@@ -12,7 +14,8 @@ public partial class Post
 
     public string? Image { get; set; }
 
+    [JsonIgnore]
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
-
+    [JsonIgnore]
     public virtual User User { get; set; } = null!;
 }
