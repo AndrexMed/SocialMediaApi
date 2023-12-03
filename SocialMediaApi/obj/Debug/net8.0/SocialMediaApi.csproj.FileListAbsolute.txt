@@ -134,3 +134,5 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\runti
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.sourcelink.json
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
