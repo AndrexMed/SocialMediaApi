@@ -136,3 +136,7 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\runti
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.sourcelink.json
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
