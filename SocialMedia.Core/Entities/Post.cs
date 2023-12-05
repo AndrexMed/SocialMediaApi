@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace SocialMedia.Core.Entities;
+﻿namespace SocialMedia.Core.Entities;
 
 public partial class Post
 {
