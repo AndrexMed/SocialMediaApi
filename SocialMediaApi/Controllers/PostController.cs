@@ -9,15 +9,15 @@ namespace SocialMediaApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostController(IPostRepository postRepository, IMapper mapper) : ControllerBase
+    public class PostController(IPostRepository postRepository, IMapper mapper, IPostService postService) : ControllerBase
     {
-        private readonly IPostRepository _postRepository = postRepository;
+        private readonly IPostService _postService = postService;
         private readonly IMapper _mapper = mapper;
 
         [HttpGet]
         public async Task<IActionResult> GetPosts()
         {
-            var posts = await _postRepository.GetPosts();
+            var posts = await _postService.GetPosts();
 
             var postsDTOs = _mapper.Map<IEnumerable<PostDTO>>(posts);
 
@@ -29,7 +29,7 @@ namespace SocialMediaApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPost(int id)
         {
-            var post = await _postRepository.GetPost(id);
+            var post = await _postService.GetPost(id);
             var postDTO = _mapper.Map<PostDTO>(post);
 
             var response = new ApiResponse<PostDTO>(postDTO);
@@ -42,7 +42,7 @@ namespace SocialMediaApi.Controllers
         {
             var post = _mapper.Map<Post>(postDTO);  
 
-            await _postRepository.InsertPost(post);
+            await _postService.InsertPost(post);
 
             postDTO = _mapper.Map<PostDTO>(post);
 
@@ -57,7 +57,7 @@ namespace SocialMediaApi.Controllers
             var postToUpdate = _mapper.Map<Post>(postDTO);
             postToUpdate.PostId = id;
 
-            var result = await _postRepository.UpdatePost(id, postToUpdate);
+            var result = await _postService.UpdatePost(id, postToUpdate);
             var response = new ApiResponse<bool>(result);
 
             return Ok(response);
@@ -66,7 +66,7 @@ namespace SocialMediaApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var result = await _postRepository.DeletePost(id);
+            var result = await _postService.DeletePost(id);
 
             var response = new ApiResponse<bool>(result);
 

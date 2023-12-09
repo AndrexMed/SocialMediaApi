@@ -1,6 +1,7 @@
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using SocialMedia.Core.Interfaces;
+using SocialMedia.Core.Services;
 using SocialMedia.Infrastructure.Data;
 using SocialMedia.Infrastructure.Filters;
 using SocialMedia.Infrastructure.Repositories;
@@ -16,6 +17,8 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 
 //Injection dependencies
 builder.Services.AddTransient<IPostRepository, PostRepository>();
+builder.Services.AddTransient<IPostService, PostService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 //Conexion bd
 builder.Services.AddDbContext<SocialMediaContext>(options =>
