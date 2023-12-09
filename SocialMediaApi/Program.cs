@@ -16,9 +16,9 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 });
 
 //Injection dependencies
-builder.Services.AddTransient<IPostRepository, PostRepository>();
 builder.Services.AddTransient<IPostService, PostService>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 //Conexion bd
 builder.Services.AddDbContext<SocialMediaContext>(options =>

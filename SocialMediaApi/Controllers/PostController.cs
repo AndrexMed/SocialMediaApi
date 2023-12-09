@@ -9,7 +9,7 @@ namespace SocialMediaApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PostController(IPostRepository postRepository, IMapper mapper, IPostService postService) : ControllerBase
+    public class PostController(IMapper mapper, IPostService postService) : ControllerBase
     {
         private readonly IPostService _postService = postService;
         private readonly IMapper _mapper = mapper;
@@ -55,9 +55,9 @@ namespace SocialMediaApi.Controllers
         public async Task<IActionResult> Put(int id, PostDTO postDTO)
         {
             var postToUpdate = _mapper.Map<Post>(postDTO);
-            postToUpdate.PostId = id;
+            postToUpdate.Id = id;
 
-            var result = await _postService.UpdatePost(id, postToUpdate);
+            var result = await _postService.UpdatePost(postToUpdate);
             var response = new ApiResponse<bool>(result);
 
             return Ok(response);
