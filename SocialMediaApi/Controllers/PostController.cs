@@ -15,9 +15,9 @@ namespace SocialMediaApi.Controllers
         private readonly IMapper _mapper = mapper;
 
         [HttpGet]
-        public async Task<IActionResult> GetPosts()
+        public IActionResult GetPosts()
         {
-            var posts = await _postService.GetPosts();
+            var posts = _postService.GetPosts();
 
             var postsDTOs = _mapper.Map<IEnumerable<PostDTO>>(posts);
 

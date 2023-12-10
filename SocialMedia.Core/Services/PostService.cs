@@ -1,4 +1,5 @@
 ﻿using SocialMedia.Core.Entities;
+using SocialMedia.Core.Exceptions;
 using SocialMedia.Core.Interfaces;
 
 namespace SocialMedia.Core.Services
@@ -7,9 +8,9 @@ namespace SocialMedia.Core.Services
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-        public async Task<IEnumerable<Post>> GetPosts()
+        public IEnumerable<Post> GetPosts()
         {
-            return await _unitOfWork.PostRepository.GetAll();
+            return _unitOfWork.PostRepository.GetAll();
         }
 
         public async Task<Post> GetPost(int id)
@@ -23,25 +24,40 @@ namespace SocialMedia.Core.Services
 
             if (user == null)
             {
-                throw new Exception("User does'nt exist");
+                throw new BusinessException("User does'nt exist");
+            }
+
+            var userPost = await _unitOfWork.PostRepository.GetPostsByUser(post.UserId);
+
+            if (userPost.Count() < 10)
+            {
+                var lastPost = userPost.OrderByDescending(x => x.Date).FirstOrDefault();
+                if ((DateTime.Now - lastPost.Date).TotalDays < 7)
+                {
+                    throw new BusinessException("You are not able to publish");
+                }
             }
 
             if (post.Description.Contains("Sexo") == true)
             {
-                throw new Exception("Content not alowed");
+                throw new BusinessException("Content not alowed");
             }
+
             await _unitOfWork.PostRepository.Add(post);
+            await _unitOfWork.SaveChangesAsync();
         }
 
         public async Task<bool> UpdatePost(Post post)
         {
-            await _unitOfWork.PostRepository.Update(post);
+            _unitOfWork.PostRepository.Update(post);
+            await _unitOfWork.SaveChangesAsync();
             return true;
         }
 
         public async Task<bool> DeletePost(int id)
         {
             await _unitOfWork.PostRepository.Delete(id);
+            await _unitOfWork.SaveChangesAsync();
             return true;
         }
     }
