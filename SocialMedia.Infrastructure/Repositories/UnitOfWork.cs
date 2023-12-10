@@ -4,17 +4,14 @@ using SocialMedia.Infrastructure.Data;
 
 namespace SocialMedia.Infrastructure.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork(SocialMediaContext context) : IUnitOfWork
     {
-        private readonly SocialMediaContext _context;
+        private readonly SocialMediaContext _context = context;
+
         private readonly IPostRepository _postRepository;
         private readonly IRepository<User> _userRepository;
         private readonly IRepository<Comment> _commentRepository;
 
-        public UnitOfWork(SocialMediaContext context)
-        {
-            _context = context;
-        }
         public IPostRepository PostRepository => _postRepository ?? new PostRepository(_context);
 
         public IRepository<User> UserRepository => _userRepository ?? new BaseRepository<User>(_context);

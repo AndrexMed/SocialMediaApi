@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using SocialMedia.Core.DTOs;
 using SocialMedia.Core.Entities;
 using SocialMedia.Core.Interfaces;
+using SocialMedia.Core.QueryFilters;
 using SocialMediaApi.Responses;
+using System.Net;
 
 namespace SocialMediaApi.Controllers
 {
@@ -15,9 +17,11 @@ namespace SocialMediaApi.Controllers
         private readonly IMapper _mapper = mapper;
 
         [HttpGet]
-        public IActionResult GetPosts()
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public IActionResult GetPosts([FromQuery]PostQueryFilter postQueryFilter)
         {
-            var posts = _postService.GetPosts();
+            var posts = _postService.GetPosts(postQueryFilter);
 
             var postsDTOs = _mapper.Map<IEnumerable<PostDTO>>(posts);
 

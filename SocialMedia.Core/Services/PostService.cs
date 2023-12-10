@@ -1,6 +1,7 @@
 ﻿using SocialMedia.Core.Entities;
 using SocialMedia.Core.Exceptions;
 using SocialMedia.Core.Interfaces;
+using SocialMedia.Core.QueryFilters;
 
 namespace SocialMedia.Core.Services
 {
@@ -8,9 +9,30 @@ namespace SocialMedia.Core.Services
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-        public IEnumerable<Post> GetPosts()
+        public IEnumerable<Post> GetPosts(PostQueryFilter postQueryFilter)
         {
-            return _unitOfWork.PostRepository.GetAll();
+            var posts = _unitOfWork.PostRepository.GetAll();
+
+            if (postQueryFilter.userId != null)
+            {
+                posts = posts.Where(x => x.UserId == postQueryFilter.userId);
+            }
+
+            if (postQueryFilter.date != null)
+            {
+                posts = posts
+                    .Where(x => 
+                           x.Date.ToShortDateString() == 
+                           postQueryFilter.date?.ToShortDateString());
+            }
+            if (postQueryFilter.description != null)
+            {
+                posts = posts
+                    .Where(x => 
+                            x.Description.ToLower()
+                            .Contains(postQueryFilter.description));
+            }
+            return posts;
         }
 
         public async Task<Post> GetPost(int id)

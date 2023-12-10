@@ -2,8 +2,6 @@
 {
     public class BusinessException : Exception
     {
-        public int MyProperty { get; set; }
-
         public BusinessException()
         {
             

@@ -13,7 +13,7 @@ namespace SocialMedia.Infrastructure.Repositories
         public BaseRepository(SocialMediaContext context)
         {
             _context = context;
-            _entities = context.Set<T>();
+            _entities = _context.Set<T>();
         }
 
         public IEnumerable<T> GetAll()
