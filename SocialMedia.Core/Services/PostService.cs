@@ -31,7 +31,7 @@ namespace SocialMedia.Core.Services
                 posts = posts
                     .Where(x => 
                             x.Description.ToLower()
-                            .Contains(postQueryFilter.description));
+                            .Contains(postQueryFilter.description.ToLower()));
             }
 
             var pagedPosts = PagedList<Post>.Create(posts, postQueryFilter.PageNumber, postQueryFilter.PageSize);
