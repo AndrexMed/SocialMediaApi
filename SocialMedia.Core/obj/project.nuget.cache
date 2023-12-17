@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CfcSwzmH/ups9yruE6uf+O/geSdRWuSCQAMyjvUCrqGn6UFvdHaeZXJtzLAj8qUmWN6KGRQFnqhL8OSRfCxxAQ==",
+  "dgSpecHash": "EBNPtO4VoLu9QZF9gr6DvZYP9NPg1l/GIx8VMbUI8suRhz2LVj9cf1VewBwIFk+x84u5BTkTCytTZN7B5AiYiQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

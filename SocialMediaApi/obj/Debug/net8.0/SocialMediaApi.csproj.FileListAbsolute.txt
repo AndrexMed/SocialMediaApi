@@ -141,3 +141,7 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Fluen
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\FluentAssertions.dll

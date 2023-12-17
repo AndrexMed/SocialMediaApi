@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SocialMedia.Core.CustomEntities
+﻿namespace SocialMedia.Core.CustomEntities
 {
     public class PagedList<T> : List<T>
     {

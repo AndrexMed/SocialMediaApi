@@ -1,4 +1,5 @@
-﻿using SocialMedia.Core.CustomEntities;
+﻿using Microsoft.Extensions.Options;
+using SocialMedia.Core.CustomEntities;
 using SocialMedia.Core.Entities;
 using SocialMedia.Core.Exceptions;
 using SocialMedia.Core.Interfaces;
@@ -6,12 +7,16 @@ using SocialMedia.Core.QueryFilters;
 
 namespace SocialMedia.Core.Services
 {
-    public class PostService(IUnitOfWork unitOfWork) : IPostService
+    public class PostService(IUnitOfWork unitOfWork, IOptions<PaginationOptions> options) : IPostService
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
+        private readonly PaginationOptions _paginationOptions = options.Value;
 
         public PagedList<Post> GetPosts(PostQueryFilter postQueryFilter)
         {
+            postQueryFilter.PageNumber = postQueryFilter.PageNumber == 0 ? _paginationOptions.DefaultPageNumber : postQueryFilter.PageNumber;
+            postQueryFilter.PageSize = postQueryFilter.PageSize == 0 ? _paginationOptions.DefaultPageSize : postQueryFilter.PageSize;
+
             var posts = _unitOfWork.PostRepository.GetAll();
 
             if (postQueryFilter.userId != null)
