@@ -12,6 +12,7 @@ using System.Net;
 
 namespace SocialMediaApi.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class PostController(IMapper mapper,
@@ -22,8 +23,13 @@ namespace SocialMediaApi.Controllers
         private readonly IMapper _mapper = mapper;
         private readonly IUriService _uriService = uriService;
 
+        /// <summary>
+        /// Test comments
+        /// </summary>
+        /// <param name="postQueryFilter">filters to apply</param>
+        /// <returns></returns>
         [HttpGet(Name = nameof(GetPosts))]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(ApiResponse<IEnumerable<PostDTO>>))]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public IActionResult GetPosts([FromQuery]PostQueryFilter postQueryFilter)
         {
