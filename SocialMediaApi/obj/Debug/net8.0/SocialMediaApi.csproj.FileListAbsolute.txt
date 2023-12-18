@@ -151,3 +151,4 @@ C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Swash
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\SocialMediaApi.xml
 C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.xml
+C:\Users\giova\source\repos\SocialMediaApi\SocialMediaApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
