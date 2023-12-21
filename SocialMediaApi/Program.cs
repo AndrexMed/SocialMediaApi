@@ -61,6 +61,7 @@ builder.Services.AddControllers(options =>
 });
 
 //Injection dependencies
+builder.Services.AddTransient<ISecurityService, SecurityService>();
 builder.Services.AddTransient<IPostService, PostService>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();

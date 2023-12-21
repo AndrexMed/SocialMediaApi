@@ -18,10 +18,12 @@ public partial class SocialMediaContext : DbContext
     public virtual DbSet<Comment> Comments { get; set; }
     public virtual DbSet<Post> Posts { get; set; }
     public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<Security> Security { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        //modelBuilder.ApplyConfiguration(new PostConfig()); One to One
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly()); //All Configs
     }
 
 }
