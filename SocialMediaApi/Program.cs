@@ -77,6 +77,7 @@ builder.Services.AddSingleton<IUriService>(provider =>
 
 //Para acceder a las variables del settings.
 builder.Services.Configure<PaginationOptions>(builder.Configuration.GetSection("Pagination"));
+builder.Services.Configure<PaginationOptions>(builder.Configuration.GetSection("PasswordOptions"));
 
 //Conexion bd
 builder.Services.AddDbContext<SocialMediaContext>(options =>
