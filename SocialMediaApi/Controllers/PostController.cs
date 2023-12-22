@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using SocialMedia.Core.CustomEntities;
 using SocialMedia.Core.DTOs;
 using SocialMedia.Core.Entities;
+using SocialMedia.Core.Enumerations;
 using SocialMedia.Core.Interfaces;
 using SocialMedia.Core.QueryFilters;
 using SocialMedia.Infrastructure.Interfaces;
@@ -97,6 +98,7 @@ namespace SocialMediaApi.Controllers
             return Ok(response);
         }
 
+        [Authorize(Roles = nameof(RoleType.Administrator))]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

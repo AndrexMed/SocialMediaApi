@@ -9,6 +9,7 @@ using SocialMedia.Core.Services;
 using SocialMedia.Infrastructure.Data;
 using SocialMedia.Infrastructure.Filters;
 using SocialMedia.Infrastructure.Interfaces;
+using SocialMedia.Infrastructure.Options;
 using SocialMedia.Infrastructure.Repositories;
 using SocialMedia.Infrastructure.Services;
 using System.Reflection;
@@ -73,11 +74,13 @@ builder.Services.AddSingleton<IUriService>(provider =>
     var absoluteUri = string.Concat(request.Scheme, "://", request.Host.ToUriComponent());
     return new UriService(absoluteUri);
 });
+
+builder.Services.AddSingleton<IPasswordService, PasswordService>();
 //-----------------------------------------------------------------------------
 
 //Para acceder a las variables del settings.
 builder.Services.Configure<PaginationOptions>(builder.Configuration.GetSection("Pagination"));
-builder.Services.Configure<PaginationOptions>(builder.Configuration.GetSection("PasswordOptions"));
+builder.Services.Configure<PasswordOptions>(builder.Configuration.GetSection("PasswordOptions"));
 
 //Conexion bd
 builder.Services.AddDbContext<SocialMediaContext>(options =>
