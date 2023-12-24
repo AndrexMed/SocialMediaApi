@@ -5276,11 +5276,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMediaApi\\SocialMediaApi.csproj",
+      "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMediaApi\\SocialMediaApi.csproj",
       "projectName": "SocialMediaApi",
-      "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMediaApi\\SocialMediaApi.csproj",
+      "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMediaApi\\SocialMediaApi.csproj",
       "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMediaApi\\obj\\",
+      "outputPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMediaApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5297,11 +5297,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {
-              "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj"
+            "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {
+              "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj"
             },
-            "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj"
+            "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj"
             }
           }
         }

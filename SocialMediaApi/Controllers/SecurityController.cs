@@ -10,7 +10,7 @@ using SocialMediaApi.Responses;
 
 namespace SocialMediaApi.Controllers
 {
-    [Authorize(Roles = nameof(RoleType.Administrator))]
+    //[Authorize(Roles = nameof(RoleType.Administrator))]
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]

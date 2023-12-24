@@ -140,6 +140,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+//Autorizacion de solicitudes del cliente
+app.UseCors();
+app.UseCors(builder =>
+    builder.WithOrigins("http://localhost:4200")
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowCredentials()
+);
+
 app.UseAuthentication();
 app.UseAuthorization();
 

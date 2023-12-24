@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj": {}
+    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj": {
+    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
+        "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
         "projectName": "SocialMedia.IntegrationTest",
-        "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
+        "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
         "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\obj\\",
+        "outputPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -83,7 +83,7 @@ namespace SocialMediaApi.Controllers
 
             var response = new ApiResponse<PostDTO>(postDTO);
 
-            return Ok(response);
+            return Created();
         }
 
         [HttpPut]

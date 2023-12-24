@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FiYgi0x2LeZdyOzvsbw0nJ+6GP3V/5Igphx9F91kDtaihtb3MRuHbIbcyyalTn78ldXdazq+IZhAhIty3oZQfw==",
+  "dgSpecHash": "kT38tVqmGt5Kt7YVBdP9B02dKgWw80Mbck5TpNQEcUIPyzyoXf7s6xqXxxaqYcopU6Qd3Lvbo6aNRcjyA4jasA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
+  "projectFilePath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.IntegrationTest\\SocialMedia.IntegrationTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giova\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",

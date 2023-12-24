@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SocialMedia.Core.Entities;
+using SocialMedia.Core.Enumerations;
 using SocialMedia.Core.Interfaces;
 using SocialMedia.Infrastructure.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
@@ -27,7 +29,7 @@ namespace SocialMediaApi.Controllers
             if (validation.Item1) // Item1 = response bool
             {
                 var token = GenerateToken(validation.Item2); // Item2 = response of security
-                return Ok(new { token });
+                return Ok(new { token, validation.Item2 });
             }
 
             return NotFound();
@@ -52,6 +54,7 @@ namespace SocialMediaApi.Controllers
             //Claims
             var claims = new[]
             {
+                new Claim(ClaimTypes.NameIdentifier, security.Id.ToString()),
                 new Claim(ClaimTypes.Name, security.UserName),
                 new Claim("User", security.User),
                 new Claim(ClaimTypes.Role, security.Role.ToString()),
@@ -67,6 +70,26 @@ namespace SocialMediaApi.Controllers
             var token = new JwtSecurityToken(header, payload);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        [Authorize]
+        [HttpGet("Get-Profile")]
+        public IActionResult GetProfile()
+        {
+            // Obtener el usuario actual a través de las Claims del token
+            var currentUser = new Security
+            {
+                Id = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value),
+                UserName = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value,
+                Role = (RoleType)Enum.Parse(typeof(RoleType), User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value)
+            };
+
+            if (currentUser == null)
+            {
+                return NotFound(); // El usuario no tiene un perfil válido
+            }
+
+            return Ok(currentUser);
         }
     }
 }

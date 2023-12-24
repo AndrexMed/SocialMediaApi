@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x4po2/BLN6uNkrjoKUFROzk7JZnBhqYNKxDhfX5Oq7N3BEfO3QNZLHOqLWkEpOcEKNGUaYzgDptheFoAyRn07Q==",
+  "dgSpecHash": "31bnopDCfPkkPFq6LEVVnPpgi1kZxnw5DfbZ7dNQTx+OatDfTdLCSuHzporzsrZ3xZOjojZae/Ob/J5YKXwSHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\giova\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

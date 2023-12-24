@@ -5523,11 +5523,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.UnitTest\\SocialMedia.UnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.UnitTest\\SocialMedia.UnitTest.csproj",
       "projectName": "SocialMedia.UnitTest",
-      "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.UnitTest\\SocialMedia.UnitTest.csproj",
+      "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.UnitTest\\SocialMedia.UnitTest.csproj",
       "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.UnitTest\\obj\\",
+      "outputPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",

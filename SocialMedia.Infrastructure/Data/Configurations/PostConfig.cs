@@ -34,6 +34,11 @@ namespace SocialMedia.Infrastructure.Data.Configurations
                 .HasMaxLength(500)
                 .IsUnicode(false);
 
+            builder.Property(e => e.Title)
+                .HasColumnName("Titulo")
+                .HasMaxLength(60)
+                .IsUnicode(false);
+
             builder.HasOne(d => d.User)
                 .WithMany(p => p.Posts)
                 .HasForeignKey(d => d.UserId)

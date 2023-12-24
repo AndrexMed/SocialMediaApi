@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {}
+    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {
+    "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj",
+        "projectUniqueName": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj",
         "projectName": "SocialMedia.Core",
-        "projectPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj",
+        "projectPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\SocialMedia.Core.csproj",
         "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giova\\source\\repos\\SocialMediaApi\\SocialMedia.Core\\obj\\",
+        "outputPath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",
