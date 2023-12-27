@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "31bnopDCfPkkPFq6LEVVnPpgi1kZxnw5DfbZ7dNQTx+OatDfTdLCSuHzporzsrZ3xZOjojZae/Ob/J5YKXwSHQ==",
+  "dgSpecHash": "pzObqg2f6bess3YsnRaNJhASt7Gvw4WhPXUgQAy6h5UHft9zl4XtDXKZ5pMEdJgcYRQFbqFLYXOm4xKjNfzSsg==",
   "success": true,
   "projectFilePath": "C:\\Users\\giova\\OneDrive\\Escritorio\\Desarrollo-Software\\SocialMedia-App\\SocialMediaApi\\SocialMedia.Infrastructure\\SocialMedia.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -68,9 +68,12 @@
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\giova\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\giova\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",

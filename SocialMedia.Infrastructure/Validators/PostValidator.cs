@@ -9,15 +9,19 @@ namespace SocialMedia.Infrastructure.Validators
         {
             RuleFor(post => post.Description)
                 .NotNull()
-                .Length(10, 100);
+                .WithMessage("La descripcion es requerida.");
 
+            RuleFor(post => post.Description)
+                .Length(10, 100)
+                .WithMessage("La descripcion solo acepta caracteres entre 10 y 100");
             //RuleFor(post => post.Date)
             //    .NotNull()
             //    .LessThan(DateTime.Now);
 
             RuleFor(post => post.Title)
                 .NotNull()
-                .Length(10, 60);
+                .Length(10, 60)
+                .WithMessage("El titlo no puede ser nula");
         }
     }
 }

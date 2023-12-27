@@ -2079,7 +2079,8 @@
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
-          "SocialMedia.Core": "1.0.0"
+          "SocialMedia.Core": "1.0.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0"
         },
         "compile": {
           "bin/placeholder/SocialMedia.Infrastructure.dll": {}
