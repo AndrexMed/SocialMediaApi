@@ -32,16 +32,23 @@ namespace SocialMediaApi.Controllers
                 return Ok(new { token, validation.Item2 });
             }
 
-            return NotFound();
+            return NotFound("User or password is invalid.");
         }
 
         private async Task<(bool, Security)> IsValidUser(UserLogin userLogin)
         {
             var user = await _securityService.GetLoginByCredentials(userLogin);
 
-            var isValid = _passwordService.Check(user.Password, userLogin.Password);
+            if (user != null)
+            {
+                var isValid = _passwordService.Check(user.Password, userLogin.Password);
 
-            return (isValid, user);
+                if (!isValid)
+                    return (false, null!);
+                else
+                    return (isValid, user);
+            }
+                return (false, null!);
         }
 
         private string GenerateToken(Security security)

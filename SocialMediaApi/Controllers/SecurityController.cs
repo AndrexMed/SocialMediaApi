@@ -23,18 +23,19 @@ namespace SocialMediaApi.Controllers
         private readonly IPasswordService _passwordService = passwordService;
 
         [HttpPost]
-        public async Task<IActionResult> Post(SecurityDTO securityDTO)
+        public async Task<IActionResult> Post(SecurityAndUserDTO securityDTO)
         {
             var security = _mapper.Map<Security>(securityDTO);
+            var user = _mapper.Map<User>(securityDTO);
 
             security.Password = _passwordService.Hash(security.Password);
 
-            await _securityService.RegisterSecurity(security);
+            await _securityService.RegisterUserAndSecurity(security, user);
 
-            securityDTO = _mapper.Map<SecurityDTO>(security);
+            //securityDTO = _mapper.Map<SecurityAndUserDTO>(security);
 
-            var response = new ApiResponse<SecurityDTO>(securityDTO);
-
+            //var response = new ApiResponse<SecurityAndUserDTO>(securityDTO);
+            var response = new ApiResponse<bool>(true);
             return Ok(response);
         }
     }

@@ -12,9 +12,21 @@ namespace SocialMedia.Core.Services
             return await _unitOfWork.SecurityRepository.GetLoginByCredentials(userLogin);
         }
 
-        public async Task RegisterSecurity(Security security)
+        public async Task RegisterUserAndSecurity(Security security, User user)
         {
-            await _unitOfWork.SecurityRepository.Add(security);
+            await _unitOfWork.UserRepository.Add(user);
+            await _unitOfWork.SaveChangesAsync();
+
+            var securityToInsert = new Security
+            {
+                User = user.FirstName + user.LastName,
+                UserName = $"{user.FirstName} {user.LastName}",
+                Password = security.Password,
+                //Role = security.Role,
+                IdUsuario = user.Id
+            };
+
+            await _unitOfWork.SecurityRepository.Add(securityToInsert);
             await _unitOfWork.SaveChangesAsync();
         }
     }
