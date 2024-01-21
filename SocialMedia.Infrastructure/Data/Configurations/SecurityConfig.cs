@@ -43,11 +43,11 @@ namespace SocialMedia.Infrastructure.Data.Configurations
                     x => (RoleType)Enum.Parse(typeof(RoleType), x)
                 );
 
-            builder.Property(e => e.IdUsuario)
+            builder.Property(e => e.UserId)
                 .HasColumnName("id_usuario");
 
-            builder.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Securitys)
-                .HasForeignKey(d => d.IdUsuario)
+            builder.HasOne(d => d.UserIdNavigation).WithMany(p => p.Securitys)
+                .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_seguridad_usuario");
         }
     }

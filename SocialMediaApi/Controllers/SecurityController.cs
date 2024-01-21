@@ -11,12 +11,9 @@ using SocialMediaApi.Responses;
 namespace SocialMediaApi.Controllers
 {
     //[Authorize(Roles = nameof(RoleType.Administrator))]
-    [Produces("application/json")]
-    [Route("api/[controller]")]
-    [ApiController]
     public class SecurityController(ISecurityService security,
                                         IMapper mapper,
-                                            IPasswordService passwordService) : ControllerBase
+                                            IPasswordService passwordService) : ApiController
     {
         private readonly ISecurityService _securityService = security;
         private readonly IMapper _mapper = mapper;

@@ -1,9 +1,10 @@
-﻿using SocialMedia.Core.Entities;
+﻿using SocialMedia.Core.DTOs;
+using SocialMedia.Core.Entities;
 
 namespace SocialMedia.Core.Interfaces
 {
     public interface ISecurityRepository : IRepository<Security>
     {
-        Task<Security> GetLoginByCredentials(UserLogin userLogin);
+        Task<SecurityAndUserDTO> GetLoginByCredentials(UserLogin userLogin);
     }
 }

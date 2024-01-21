@@ -16,11 +16,9 @@ namespace SocialMediaApi.Controllers
 {
     [Authorize]
     [Produces("application/json")]
-    [Route("api/[controller]")]
-    [ApiController]
     public class PostController(IMapper mapper,
                                     IPostService postService,
-                                        IUriService uriService) : ControllerBase
+                                        IUriService uriService) : ApiController
     {
         private readonly IPostService _postService = postService;
         private readonly IMapper _mapper = mapper;

@@ -1,4 +1,5 @@
-﻿using SocialMedia.Core.Entities;
+﻿using SocialMedia.Core.DTOs;
+using SocialMedia.Core.Entities;
 using SocialMedia.Core.Interfaces;
 
 namespace SocialMedia.Core.Services
@@ -7,7 +8,7 @@ namespace SocialMedia.Core.Services
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-        public async Task<Security> GetLoginByCredentials(UserLogin userLogin)
+        public async Task<SecurityAndUserDTO> GetLoginByCredentials(UserLogin userLogin)
         {
             return await _unitOfWork.SecurityRepository.GetLoginByCredentials(userLogin);
         }
@@ -23,7 +24,7 @@ namespace SocialMedia.Core.Services
                 UserName = $"{user.FirstName} {user.LastName}",
                 Password = security.Password,
                 //Role = security.Role,
-                IdUsuario = user.Id
+                UserId = user.Id
             };
 
             await _unitOfWork.SecurityRepository.Add(securityToInsert);

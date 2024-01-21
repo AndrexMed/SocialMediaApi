@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SocialMedia.Core.DTOs;
 using SocialMedia.Core.Entities;
 using SocialMedia.Core.Interfaces;
 using SocialMedia.Infrastructure.Data;
@@ -11,7 +12,7 @@ namespace SocialMedia.Infrastructure.Repositories
         {
         }
 
-        public async Task<Security> GetLoginByCredentials(UserLogin userLogin)
+        public async Task<SecurityAndUserDTO> GetLoginByCredentials(UserLogin userLogin)
         {
             var user = await _entities.FirstOrDefaultAsync(x => x.User == userLogin.User);
 
@@ -19,7 +20,22 @@ namespace SocialMedia.Infrastructure.Repositories
             {
                 return null!;
             }
-            return user;
+
+            return new SecurityAndUserDTO
+            {
+                UserId = user.UserId,
+                FirstName = "Test",
+                LastName = "Test 2",
+                Email = "Email",
+                DateOfBirth = new DateOnly(),
+                Telephone = "123456",
+                IsActive = true,
+
+                SecurityId = user.Id,
+                User = user.User,
+                Role = user.Role,
+                Password = user.Password,
+            };
         }
     }
 }
