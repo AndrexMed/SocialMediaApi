@@ -59,19 +59,19 @@ namespace SocialMedia.Core.Services
 
             var userPost = await _unitOfWork.PostRepository.GetPostsByUser(post.UserId);
 
-            //if (userPost.Count() < 10)
-            //{
-            //    var lastPost = userPost.OrderByDescending(x => x.Date).FirstOrDefault();
-            //    if ((DateTime.Now - lastPost.Date).TotalDays < 7)
-            //    {
-            //        throw new BusinessException("You are not able to publish");
-            //    }
-            //}
+            if (userPost.Count() < 10)
+            {
+                var lastPost = userPost.OrderByDescending(x => x.Date).FirstOrDefault();
+                if ((DateTime.Now - lastPost.Date).TotalDays < 7)
+                {
+                    throw new BusinessException("You are not able to publish");
+                }
+            }
 
-            //if (post.Description.Contains("Sexo") == true)
-            //{
-            //    throw new BusinessException("Content not alowed");
-            //}
+            if (post.Description.Contains("Sexo") == true)
+            {
+                throw new BusinessException("Content not alowed");
+            }
 
             await _unitOfWork.PostRepository.Add(post);
             await _unitOfWork.SaveChangesAsync();

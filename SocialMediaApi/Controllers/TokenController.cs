@@ -16,14 +16,11 @@ namespace SocialMediaApi.Controllers
 {
     public class TokenController(IConfiguration configuration,
                                     ISecurityService security,
-                                        IPasswordService passwordService,
-                                            SocialMediaContext context) : ApiController
+                                        IPasswordService passwordService) : ApiController
     {
         private readonly IConfiguration _configuration = configuration;
         private readonly ISecurityService _securityService = security;
         private readonly IPasswordService _passwordService = passwordService;
-
-        private readonly SocialMediaContext _context = context;
 
         [HttpPost]
         public async Task<IActionResult> Authentication(UserLogin login)
@@ -66,8 +63,6 @@ namespace SocialMediaApi.Controllers
             //Claims
             var claims = new[]
             {
-                //new Claim(ClaimTypes.NameIdentifier, security.Id.ToString()),
-                //new Claim(ClaimTypes.Name, security.UserName),
                 new Claim(ClaimTypes.NameIdentifier, security.UserId.ToString()),
                 new Claim(ClaimTypes.Name, $"{security.FirstName} {security.LastName}"),
                 new Claim("User", security.User),
@@ -90,29 +85,16 @@ namespace SocialMediaApi.Controllers
         [HttpGet("Get-Profile")]
         public async Task<IActionResult> GetProfile()
         {
-            // Obtener el usuario actual a través de las Claims del token
-            //var currentUser = new SecurityAndUserDTO
-            //{
-            //    UserId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value),
-            //    UserName = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value,
-            //    Role = (RoleType)Enum.Parse(typeof(RoleType), User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value)
-            //};
-
             var currentUser = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value);
 
             if (currentUser != 0)
             {
-                var userAndSecurity = await (from user in _context.Users
-                                             join security in _context.Security on user.Id equals security.UserId
-                                             where user.Id == currentUser
-                                             select new SecurityAndUserDTO
-                                             {
-                                                 UserId = user.Id,
-                                                 User = security.User
-                                             }).FirstOrDefaultAsync();
+                var userSecurity = await _securityService.GetUserProfileById(currentUser);
 
-                return Ok(userAndSecurity);
-
+                if (userSecurity != null)
+                {
+                    return Ok(userSecurity);
+                }
             }
             return NotFound();
         }

@@ -13,6 +13,11 @@ namespace SocialMedia.Core.Services
             return await _unitOfWork.SecurityRepository.GetLoginByCredentials(userLogin);
         }
 
+        public async Task<SecurityAndUserDTO> GetUserProfileById(int id)
+        {
+            return await _unitOfWork.SecurityRepository.GetUserAndProfileById(id);
+        }
+
         public async Task RegisterUserAndSecurity(Security security, User user)
         {
             await _unitOfWork.UserRepository.Add(user);

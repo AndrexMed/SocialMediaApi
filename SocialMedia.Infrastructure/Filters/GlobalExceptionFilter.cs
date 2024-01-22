@@ -21,7 +21,7 @@ namespace SocialMedia.Infrastructure.Filters
 
                 var json = new
                 {
-                    erros = new[] { validation },
+                    errors = new[] { validation },
                 };
 
                 context.Result = new BadRequestObjectResult(json);
