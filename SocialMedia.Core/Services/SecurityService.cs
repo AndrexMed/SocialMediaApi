@@ -35,5 +35,10 @@ namespace SocialMedia.Core.Services
             await _unitOfWork.SecurityRepository.Add(securityToInsert);
             await _unitOfWork.SaveChangesAsync();
         }
+
+        public async Task<string> RecoverPassword(RecoverPassDTO recover)
+        {
+            return await _unitOfWork.SecurityRepository.RecoverPassword(recover);
+        }
     }
 }

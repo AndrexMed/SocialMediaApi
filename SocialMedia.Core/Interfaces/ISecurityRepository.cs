@@ -7,5 +7,6 @@ namespace SocialMedia.Core.Interfaces
     {
         Task<SecurityAndUserDTO> GetLoginByCredentials(UserLogin userLogin);
         Task<SecurityAndUserDTO> GetUserAndProfileById(int id);
+        Task<string> RecoverPassword(RecoverPassDTO recoverPassword);
     }
 }

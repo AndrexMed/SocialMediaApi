@@ -299,10 +299,10 @@ C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMed
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.SocialMediaApi.props
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\scopedcss\bundle\SocialMediaApi.styles.css
-C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.csproj.CopyComplete
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.dll
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\refint\SocialMediaApi.dll
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.xml
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.pdb
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMediaApi.genruntimeconfig.cache
 C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\ref\SocialMediaApi.dll
+C:\Users\giova\OneDrive\Escritorio\Desarrollo-Software\SocialMedia-App\SocialMediaApi\SocialMediaApi\obj\Debug\net8.0\SocialMe.32795615.Up2Date

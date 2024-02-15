@@ -44,6 +44,12 @@ namespace SocialMedia.Infrastructure.Data.Configurations
 
             builder.Property(e => e.IsActive)
                 .HasColumnName("Activo");
+
+            builder.Property(e => e.SecretWord)
+                .HasColumnName("palabra_secreta")
+                .IsRequired(true)
+                .IsUnicode(false)
+                .HasMaxLength(50);
         }
     }
 

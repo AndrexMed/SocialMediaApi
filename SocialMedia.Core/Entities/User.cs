@@ -8,6 +8,7 @@ public partial class User : BaseEntity
     public DateOnly DateOfBirth { get; set; }
     public string? Telephone { get; set; }
     public bool IsActive { get; set; } = true;
+    public string SecretWord { get; set; }
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
     public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
     public virtual ICollection<Security> Securitys { get; set; } = new List<Security>();

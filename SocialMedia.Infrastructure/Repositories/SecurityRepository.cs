@@ -53,5 +53,23 @@ namespace SocialMedia.Infrastructure.Repositories
             return userSecurity ?? throw new Exception("No se encontró el usuario.");
         }
 
+        public async Task<string> RecoverPassword(RecoverPassDTO recoverPassword)
+        {
+            var userAndSecretWord = await (from user in _context.Users
+                                    join sec in _context.Security on user.Id equals sec.UserId
+                                    where user.SecretWord == recoverPassword.SecretWord
+                                    select new
+                                    {
+                                        user,
+                                        sec
+                                    })
+                                    .FirstOrDefaultAsync();
+
+            if (userAndSecretWord == null)
+                throw new Exception("The user or secret word is not valid.");
+
+            return userAndSecretWord.sec.Password.ToString();
+        }
+
     }
 }
